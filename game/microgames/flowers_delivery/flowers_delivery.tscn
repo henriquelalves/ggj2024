@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxxawcp2cuijl"]
+
+[ext_resource type="Texture2D" uid="uid://dbohkvl4ryqbk" path="res://game/microgames/flowers_delivery/assets/girlfriend.png" id="1_isthg"]
+[ext_resource type="Script" path="res://game/microgames/flowers_delivery/flowers_delivery.gd" id="1_jhoh1"]
+[ext_resource type="Texture2D" uid="uid://cbmk1jr2sqrv1" path="res://game/microgames/flowers_delivery/assets/player1.png" id="2_8splb"]
+[ext_resource type="Script" path="res://game/microgames/flowers_delivery/player.gd" id="3_kgimw"]
+[ext_resource type="Texture2D" uid="uid://dfd2176us2w7g" path="res://game/microgames/flowers_delivery/assets/player2.png" id="3_pyt0j"]
+[ext_resource type="Texture2D" uid="uid://bjs5knhxc6vvi" path="res://game/microgames/flowers_delivery/assets/dodge.png" id="4_snyja"]
+[ext_resource type="Texture2D" uid="uid://dv1e2uv1xcoxs" path="res://game/shared/assets/blank.png" id="6_omk1m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhfcp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8splb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pyt0j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_snyja")
+}],
+"loop": true,
+"name": &"dodge",
+"speed": 5.0
+}]
+
+[node name="FlowersDelivery" type="Node3D"]
+script = ExtResource("1_jhoh1")
+
+[node name="Girlfriend" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45863, 1.42701, 0)
+billboard = 1
+texture = ExtResource("1_isthg")
+
+[node name="Player" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 13.663)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_fhfcp")
+animation = &"dodge"
+autoplay = "default"
+script = ExtResource("3_kgimw")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(0.568531, 0.293446, -0.768545, 0, 0.934218, 0.356704, 0.822662, -0.202797, 0.531132, -3.65287, 1.74709, 2.17253)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 0.4, 0, 0, 0, 1, 1.5768, 2.47888, 7.67072)
+modulate = Color(1, 0.301961, 0.231373, 1)
+pixel_size = 1.0
+texture = ExtResource("6_omk1m")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
