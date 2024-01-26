@@ -1,0 +1,63 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dwwhh2i13kfs2"]
+
+[ext_resource type="Texture2D" uid="uid://6v31vl2mxbvb" path="res://game/shared/assets/namoradinha_sheet.png" id="1_4p1c3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hun5u"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(0, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ojse"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(512, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f022f"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(0, 2048, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq2tu"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(1024, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0bvy"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(512, 2048, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usu14"]
+atlas = ExtResource("1_4p1c3")
+region = Rect2(1024, 2048, 512, 512)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hun5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ojse")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f022f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq2tu")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0bvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usu14")
+}],
+"loop": true,
+"name": &"mad",
+"speed": 5.0
+}]
