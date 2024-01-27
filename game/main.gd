@@ -14,6 +14,11 @@ var _microgame_count = 1
 
 
 func _ready() -> void:
+	%FadeAnimationPlayer.play("fade_in")
+	transition.reset()
+	transition.microgame_fade_out()
+	await %FadeAnimationPlayer.animation_finished
+	
 	remove_child(microgame_viewport)
 	transition.microgame_viewport_container.add_child(microgame_viewport)
 	microgame_viewport.offset_bottom = 0
@@ -21,12 +26,8 @@ func _ready() -> void:
 	microgame_viewport.offset_right = 0
 	microgame_viewport.offset_top = 0
 	
-	transition.reset()
-	
 	while true:
 		if _current_microgame != null:
-			_current_microgame.process_mode = Node.PROCESS_MODE_DISABLED
-			
 			await transition.microgame_fade_out()
 			_current_microgame.queue_free()
 			
@@ -43,6 +44,9 @@ func _ready() -> void:
 		_current_microgame.process_mode = Node.PROCESS_MODE_INHERIT
 		
 		_won_last_microgame = await _current_microgame.finished
+		_current_microgame.process_mode = Node.PROCESS_MODE_DISABLED
+		
+		await get_tree().create_timer(1.0).timeout
 		
 		_starting = false
 		_microgame_count += 1
