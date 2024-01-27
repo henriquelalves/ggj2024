@@ -10,4 +10,5 @@ func _on_player_heart_body_entered(body):
 func disable_player():
 	$PlayerHeart.get_node("AnimatedSprite2D").play("death")
 	$PlayerHeart.playerControl = false
+	$PlayerHeart.get_node("AudioStreamPlayer").play()
 
