@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://j0btxfrk2q8k" path="res://game/microgames/find_window/assets/Img_background_windows.png" id="1_w06df"]
 [ext_resource type="Texture2D" uid="uid://7h0hokgsxon4" path="res://game/microgames/find_window/assets/Img_MSN_namoradinha.png" id="3_ekh6x"]
 [ext_resource type="Script" path="res://game/microgames/find_window/msn_girlfriend.gd" id="4_ithnb"]
-[ext_resource type="PackedScene" uid="uid://dxo3khe6emukf" path="res://game/microgames/find_window/msn_regular.tscn" id="4_t7t3v"]
+[ext_resource type="PackedScene" path="res://game/microgames/find_window/msn_regular.tscn" id="4_t7t3v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_csx47"]
 font_color = Color(0.443137, 0.443137, 0.443137, 1)
 
 [node name="FindWindow" type="Node"]
 script = ExtResource("1_167ws")
+microgame_control = 1
 win_on_timeout = false
 
 [node name="ImgBackgroundWindows" type="Sprite2D" parent="."]
@@ -95,6 +96,30 @@ offset_right = 876.0
 offset_bottom = 620.0
 
 [node name="ImgMsnNormal5" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal6" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal7" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal8" parent="AllWindows" instance=ExtResource("4_t7t3v")]
 visible = false
 layout_mode = 0
 offset_left = 258.0
