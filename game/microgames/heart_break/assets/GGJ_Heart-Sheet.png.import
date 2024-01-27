@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn4ogu386cfsa"
-path="res://.godot/imported/GGJ_Heart-Sheet.png-1b22dd03d8ebc1bb69e1fa37955fcecc.ctex"
+path="res://.godot/imported/GGJ_Heart-Sheet.png-d450bea318970c61f802de4c0e4039ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/shared/assets/GGJ_Heart-Sheet.png"
-dest_files=["res://.godot/imported/GGJ_Heart-Sheet.png-1b22dd03d8ebc1bb69e1fa37955fcecc.ctex"]
+source_file="res://game/microgames/heart_break/assets/GGJ_Heart-Sheet.png"
+dest_files=["res://.godot/imported/GGJ_Heart-Sheet.png-d450bea318970c61f802de4c0e4039ea.ctex"]
 
 [params]
 
