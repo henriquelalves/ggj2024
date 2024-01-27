@@ -8,6 +8,7 @@ enum MICROGAME_CONTROL {HEAD_ON_KEYBOARD, INVERTED_HAND, ONLY_PINKY}
 @export var microgame_name = ""
 @export var microgame_control: MICROGAME_CONTROL
 @export var instructions = ""
+@export var win_on_timeout = true
 
 signal finished(won)
 
@@ -19,7 +20,7 @@ func _ready():
 	timer.start(MICROGAME_TIMER)
 	
 	timer.timeout.connect(func():
-		finished.emit(false)
+		finished.emit(win_on_timeout)
 	)
 	
 	_microgame_ready()

@@ -290,6 +290,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Background/BackgroundRect"]
 layout_mode = 1
@@ -313,6 +314,7 @@ offset_right = 792.0
 offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MicrogameViewportContainer" type="Control" parent="Foreground/ViewportContainer"]
 unique_name_in_owner = true
@@ -322,6 +324,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Foreground/ViewportContainer"]
 layout_mode = 1
@@ -330,6 +333,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MicrogameCountLabel" type="Label" parent="Foreground"]
 unique_name_in_owner = true
@@ -338,10 +342,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 2815.0
-offset_top = 1180.0
-offset_right = 3051.0
-offset_bottom = 1290.0
+offset_left = 5119.0
+offset_top = 2476.0
+offset_right = 5355.0
+offset_bottom = 2586.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "blabla"
@@ -357,6 +361,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="CharacterAnimation" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
 position = Vector2(338, 305)

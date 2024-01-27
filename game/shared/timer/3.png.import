@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deb8hl537upa1"
-path="res://.godot/imported/Img_timer_2.png-14a9dea107fce83f2567d31062fff978.ctex"
+uid="uid://bt58qlhtr7b4d"
+path="res://.godot/imported/3.png-44f6171d385b4c76bdcfb28982ea3a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/microgames/timer/Img_timer_2.png"
-dest_files=["res://.godot/imported/Img_timer_2.png-14a9dea107fce83f2567d31062fff978.ctex"]
+source_file="res://game/shared/timer/3.png"
+dest_files=["res://.godot/imported/3.png-44f6171d385b4c76bdcfb28982ea3a0a.ctex"]
 
 [params]
 

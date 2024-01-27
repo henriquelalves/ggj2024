@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfur1citqmkd1"
-path="res://.godot/imported/4.png-1ed010bd22534d740e98c46dbc38c0a8.ctex"
+uid="uid://vme6xl77c48e"
+path="res://.godot/imported/1.png-0b52cba24ff7e7d3772d1c2410140dc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/microgames/timer/4.png"
-dest_files=["res://.godot/imported/4.png-1ed010bd22534d740e98c46dbc38c0a8.ctex"]
+source_file="res://game/shared/timer/1.png"
+dest_files=["res://.godot/imported/1.png-0b52cba24ff7e7d3772d1c2410140dc8.ctex"]
 
 [params]
 
