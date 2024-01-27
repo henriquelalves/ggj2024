@@ -18,7 +18,6 @@ func _ready():
 	timer.one_shot = true
 	timer.start(MICROGAME_TIMER)
 	
-	
 	timer.timeout.connect(func():
 		finished.emit(false)
 	)
