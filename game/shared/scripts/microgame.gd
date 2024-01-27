@@ -4,4 +4,4 @@ extends Node
 @export var microgame_name = ""
 @export var instruction = ""
 
-signal finished
+signal finished(won)

@@ -12,7 +12,11 @@ func _process(delta):
 	
 func _on_player_heart_body_entered(body):
 	if body is Spiky:
-		print("hey")
-		$PlayerHeart.get_node("AnimatedSprite2D").play("death")
+		disable_player()
 		## GameOver
 		pass
+
+func disable_player():
+		$PlayerHeart.get_node("AnimatedSprite2D").play("death")
+		$PlayerHeart.playerControl = false
+

@@ -54,4 +54,7 @@ position = Vector2(235, 481)
 [node name="Spiky4" parent="." instance=ExtResource("3_dfa23")]
 position = Vector2(845, 496)
 
+[node name="Spiky5" parent="." instance=ExtResource("3_dfa23")]
+position = Vector2(570, 104)
+
 [connection signal="body_entered" from="PlayerHeart" to="." method="_on_player_heart_body_entered"]

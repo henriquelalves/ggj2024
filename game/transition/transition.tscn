@@ -1,10 +1,220 @@
-[gd_scene load_steps=6 format=3 uid="uid://u3g8s4kck61t"]
+[gd_scene load_steps=14 format=3 uid="uid://u3g8s4kck61t"]
 
 [ext_resource type="Script" path="res://game/transition/transition.gd" id="1_vtfth"]
+[ext_resource type="PackedScene" uid="uid://k0mx61qjphst" path="res://game/shared/characters/character_animation.tscn" id="2_2nft6"]
+[ext_resource type="FontFile" uid="uid://den305djdhip6" path="res://game/shared/assets/SingleDay-Regular.ttf" id="2_phg5r"]
+[ext_resource type="SpriteFrames" uid="uid://bosng2x2w205a" path="res://game/shared/characters/fro_animation.tres" id="3_gxf7f"]
+[ext_resource type="Texture2D" uid="uid://6v31vl2mxbvb" path="res://game/shared/assets/namoradinha_sheet.png" id="4_wxw0m"]
+[ext_resource type="SpriteFrames" uid="uid://jvyw0cu710vo" path="res://game/shared/characters/kit_animation.tres" id="5_l50r6"]
+[ext_resource type="SpriteFrames" uid="uid://dwwhh2i13kfs2" path="res://game/shared/characters/mi_animation.tres" id="6_eiuh1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wobn0"]
-font_size = 44
+font = ExtResource("2_phg5r")
+font_size = 80
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hump4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/Characters/CharacterAnimation:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(338, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(163, 386)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(820, 306)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(982, 389)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Foreground/ViewportContainer:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 220)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Foreground/ViewportContainer:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, 68)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Foreground/MicrogameCountLabel:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(511, -116)]
+}
+
+[sub_resource type="Animation" id="Animation_67853"]
+resource_name = "microgame_fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Foreground/ViewportContainer:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 648), Vector2(432, 220)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Foreground/ViewportContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(360, 68)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-158, 449), Vector2(338, 305)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-333, 530), Vector2(163, 386)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1340, 468), Vector2(820, 306)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1502, 551), Vector2(982, 389)]
+}
+
+[sub_resource type="Animation" id="Animation_8isba"]
+resource_name = "show_microgame_count"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/MicrogameCountLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.3, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(463, -116), Vector2(455, 275), Vector2(455, 275), Vector2(454, 715)]
+}
 
 [sub_resource type="Animation" id="Animation_lm0of"]
 resource_name = "win_transition"
@@ -12,7 +222,7 @@ length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/Label:position")
+tracks/0/path = NodePath("Foreground/MicrogameCountLabel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -72,60 +282,11 @@ tracks/4/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_hump4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/Label:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(511, -116)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Foreground/ViewportContainer:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1152, 648)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Foreground/ViewportContainer:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_en0c8"]
 _data = {
 "RESET": SubResource("Animation_hump4"),
+"microgame_fade_out": SubResource("Animation_67853"),
+"show_microgame_count": SubResource("Animation_8isba"),
 "win_transition": SubResource("Animation_lm0of")
 }
 
@@ -158,8 +319,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = 360.0
+offset_top = 68.0
+offset_right = 792.0
+offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -179,9 +342,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0)
 
-[node name="Label" type="Label" parent="Foreground"]
+[node name="MicrogameCountLabel" type="Label" parent="Foreground"]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -189,12 +352,72 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 511.0
 offset_top = -116.0
-offset_right = 641.0
-offset_bottom = -55.0
+offset_right = 747.0
+offset_bottom = -5.99976
 grow_horizontal = 2
 grow_vertical = 2
 text = "blabla"
 label_settings = SubResource("LabelSettings_wobn0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Characters" type="Control" parent="Foreground"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterAnimation" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
+position = Vector2(338, 305)
+sprite_frames = ExtResource("3_gxf7f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation"]
+show_behind_parent = true
+position = Vector2(-14, 12)
+texture = ExtResource("4_wxw0m")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+hframes = 3
+vframes = 9
+
+[node name="CharacterAnimation2" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
+position = Vector2(163, 386)
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation2"]
+show_behind_parent = true
+position = Vector2(-18, 5)
+texture = ExtResource("4_wxw0m")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+hframes = 3
+vframes = 9
+
+[node name="CharacterAnimation3" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
+position = Vector2(820, 306)
+scale = Vector2(-1, 1)
+sprite_frames = ExtResource("5_l50r6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation3"]
+show_behind_parent = true
+position = Vector2(5, 18)
+texture = ExtResource("4_wxw0m")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+hframes = 3
+vframes = 9
+
+[node name="CharacterAnimation4" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
+position = Vector2(982, 389)
+scale = Vector2(-1, 1)
+sprite_frames = ExtResource("6_eiuh1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation4"]
+show_behind_parent = true
+position = Vector2(0, -1)
+texture = ExtResource("4_wxw0m")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+hframes = 3
+vframes = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
