@@ -1,0 +1,215 @@
+[gd_scene load_steps=22 format=3 uid="uid://tbv0acwtfx1t"]
+
+[ext_resource type="Script" path="res://game/microgames/baseball_kiss/baseball_kiss.gd" id="1_urxm5"]
+[ext_resource type="Texture2D" uid="uid://1mnstkvhabph" path="res://game/microgames/baseball_kiss/assets/Img_background_windows.png" id="2_odjhy"]
+[ext_resource type="Texture2D" uid="uid://bedu1tujmm2o4" path="res://game/microgames/baseball_kiss/assets/Img_bre_1.png" id="3_xeivh"]
+[ext_resource type="Script" path="res://game/microgames/baseball_kiss/pepe_character.gd" id="4_1xnm7"]
+[ext_resource type="Texture2D" uid="uid://t3nmcgrbnq6r" path="res://game/microgames/baseball_kiss/assets/Img_bre_2.png" id="4_efkx0"]
+[ext_resource type="Texture2D" uid="uid://ui07roe4buc8" path="res://game/microgames/baseball_kiss/assets/Img_pepe_1.png" id="4_marsr"]
+[ext_resource type="Texture2D" uid="uid://g38kht7l2w8q" path="res://game/microgames/baseball_kiss/assets/Img_bre_4.png" id="5_nmk8o"]
+[ext_resource type="Texture2D" uid="uid://6segrqmtyslm" path="res://game/microgames/baseball_kiss/assets/Img_pepe_3.png" id="5_viue0"]
+[ext_resource type="Texture2D" uid="uid://di8c7rl1lm62b" path="res://game/microgames/baseball_kiss/assets/Img_kiss.png" id="6_j2h3k"]
+[ext_resource type="Texture2D" uid="uid://cym248ma3nprt" path="res://game/microgames/baseball_kiss/assets/Img_bre_3.png" id="6_j64wj"]
+[ext_resource type="Texture2D" uid="uid://b4mybwt5qhyfv" path="res://game/microgames/baseball_kiss/assets/Img_pepe_2.png" id="7_nvi3g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf7ev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_efkx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xeivh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xeivh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nmk8o")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_j64wj")
+}],
+"loop": true,
+"name": &"win",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ribd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_viue0")
+}],
+"loop": true,
+"name": &"catch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_marsr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_marsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nvi3g")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15amx"]
+size = Vector2(48.5, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpf1j"]
+size = Vector2(54, 197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nrw6"]
+size = Vector2(20, 674)
+
+[sub_resource type="Curve2D" id="Curve2D_u6iwn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.66675, 110, -117.725, 84.0896, 117.725, -84.0896, -243.333, -210, 123.331, 109.317, -123.331, -109.317, -346.667, -636.667, 173.046, -144.793, -173.046, 144.793, -843.333, -696.667, 183.64, 187.172, -183.64, -187.172, -1156.67, -486.667, 0, 0, 0, 0, -1436.67, -793.333, 153.403, -145.92, -153.403, 145.92, -1903.33, -750, 59.8646, -276.874, -59.8646, 276.874, -2140, -470, -235.717, 56.1231, 235.717, -56.1231, -1673.33, -366.667, 22.4492, -115.988, -22.4492, 115.988, -1300, -80, 430.277, 82.3139, -430.277, -82.3139, -1713.33, 90, -149.662, -172.111, 149.662, 172.111, -1930, 406.667, 0, 0, 0, 0, -1843.33, 1143.33)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_hb7qp"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.66675, 110, -117.725, 84.0896, 117.725, -84.0896, -243.333, -210, 123.331, 109.317, -123.331, -109.317, -346.667, -636.667, 173.046, -144.793, -173.046, 144.793, -843.333, -696.667, 183.64, 187.172, -183.64, -187.172, -1156.67, -486.667, 130.192, 41.9974, -130.192, -41.9974, -1363.33, -783.333, -100.794, -159.59, 100.794, 159.59, -1753.33, -520, 264.583, -256.184, -264.583, 256.184, -1816.67, -140, -92.3942, -167.989, 92.3942, 167.989, -1416.67, -63.3334, -184.788, -54.5966, 184.788, 54.5966, -1020, 33.3333, 277.183, 37.7976, -277.183, -37.7976, -1100, 313.333, 113.393, -50.3968, -113.393, 50.3968, -1446.67, 473.333, 46.1971, -151.191, -46.1971, 151.191, -1380, 960, 0, 0, 0, 0, -1450, 1243.33)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_3gt8y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.66675, 110, -117.725, 84.0896, 117.725, -84.0896, -243.333, -210, 123.331, 109.317, -123.331, -109.317, -346.667, -636.667, -58.7963, -125.992, 58.7963, 125.992, -123.333, -843.333, -138.591, -109.193, 138.591, 109.193, 490, -890, -188.988, -142.791, 188.988, 142.791, 673.333, -550, -16.7989, -260.384, 16.7989, 260.384, 996.667, -366.667, 25.1984, -348.578, -25.1984, 348.578, 1083.33, 66.6666, 209.987, 29.3982, -209.987, -29.3982, 456.667, 56.6666, -109.193, -188.988, 109.193, 188.988, 246.667, 356.667, 247.784, -277.183, -247.784, 277.183, 643.333, 683.333, 0, 0, 0, 0, 626.667, 1096.67)
+}
+point_count = 12
+
+[sub_resource type="Curve2D" id="Curve2D_bnyty"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.66675, 110, -117.725, 84.0896, 117.725, -84.0896, -243.333, -210, 123.331, 109.317, -123.331, -109.317, -346.667, -636.667, -58.7963, -125.992, 58.7963, 125.992, -123.333, -843.333, -138.591, -109.193, 138.591, 109.193, 490, -890, -188.988, -142.791, 188.988, 142.791, 673.333, -550, -205.787, 62.9961, 205.787, -62.9961, 1146.67, -626.667, 109.193, 25.1984, -109.193, -25.1984, 1353.33, -380, 243.585, 180.589, -243.585, -180.589, 1200, 50, -50.3968, -113.393, 50.3968, 113.393, 706.667, 50, -235.185, -193.188, 235.185, 193.188, 640, 330, -260.384, -113.393, 260.384, 113.393, 1200, 520, 0, 0, 0, 0, 1316.67, 1103.33)
+}
+point_count = 13
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53xmk"]
+size = Vector2(44.9999, 42.6554)
+
+[node name="BaseballKiss" type="Node"]
+script = ExtResource("1_urxm5")
+
+[node name="ImgBackgroundWindows" type="Sprite2D" parent="."]
+position = Vector2(579, 324)
+texture = ExtResource("2_odjhy")
+
+[node name="BreCharacter" type="AnimatedSprite2D" parent="."]
+position = Vector2(749, 435)
+sprite_frames = SubResource("SpriteFrames_yf7ev")
+autoplay = "default"
+
+[node name="PepeCharacter" type="CharacterBody2D" parent="."]
+position = Vector2(581, 522)
+script = ExtResource("4_1xnm7")
+
+[node name="PepeSprite" type="AnimatedSprite2D" parent="PepeCharacter"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_ribd4")
+autoplay = "default"
+
+[node name="HandCollision" type="Area2D" parent="PepeCharacter"]
+position = Vector2(40, -78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PepeCharacter/HandCollision"]
+position = Vector2(2, -3)
+shape = SubResource("RectangleShape2D_15amx")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="PepeCharacter"]
+position = Vector2(-17, 25.5)
+shape = SubResource("RectangleShape2D_bpf1j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-7, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 327)
+shape = SubResource("RectangleShape2D_0nrw6")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1160, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0, 327)
+shape = SubResource("RectangleShape2D_0nrw6")
+
+[node name="Paths" type="Node2D" parent="."]
+
+[node name="PathFarLeft" type="Path2D" parent="Paths"]
+position = Vector2(721, 348)
+scale = Vector2(0.3, 0.3)
+curve = SubResource("Curve2D_u6iwn")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/PathFarLeft"]
+position = Vector2(-6.66675, 110)
+rotation = -2.2076
+
+[node name="ParthLeft" type="Path2D" parent="Paths"]
+position = Vector2(720, 348)
+scale = Vector2(0.3, 0.3)
+curve = SubResource("Curve2D_hb7qp")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthLeft"]
+position = Vector2(-1751.22, -68.4032)
+rotation = -0.271729
+progress = 3626.66
+
+[node name="ParthRight" type="Path2D" parent="Paths"]
+position = Vector2(720, 348)
+scale = Vector2(0.3, 0.3)
+curve = SubResource("Curve2D_3gt8y")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthRight"]
+position = Vector2(855.94, 208.715)
+rotation = -2.84667
+progress = 3626.66
+
+[node name="ParthFarRight" type="Path2D" parent="Paths"]
+position = Vector2(720, 348)
+scale = Vector2(0.3, 0.3)
+curve = SubResource("Curve2D_bnyty")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthFarRight"]
+position = Vector2(1325.28, -141.12)
+rotation = 1.51209
+progress = 3626.66
+
+[node name="Kiss" type="Area2D" parent="."]
+unique_name_in_owner = true
+rotation = 0.125908
+scale = Vector2(0.3, 0.3)
+
+[node name="ImgKiss" type="Sprite2D" parent="Kiss"]
+scale = Vector2(1, 1)
+texture = ExtResource("6_j2h3k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss"]
+position = Vector2(1.44458, -1.86267)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_53xmk")
+
+[connection signal="area_shape_entered" from="PepeCharacter/HandCollision" to="." method="_on_hand_collision_area_shape_entered"]
