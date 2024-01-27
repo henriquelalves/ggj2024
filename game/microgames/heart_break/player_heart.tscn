@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://c5j2ojumuirph" path="res://game/microgames/heart_break/assets/heart_animation.tres" id="1_koysl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sp11c"]
-radius = 52.469
+radius = 57.0088
 
 [node name="PlayerHeart" type="RigidBody2D"]
 gravity_scale = 0.0
