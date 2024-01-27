@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv4646lxakb8d"
-path="res://.godot/imported/Img_maos_trocadas.png-f3567bfba72bd92c0095646db01b9d96.ctex"
+uid="uid://cxhuyyforfxwm"
+path="res://.godot/imported/Img_mindinho.png-d4d784174ba5768bbd627ab4feb3be93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/microgames/tutorial/assets/Img_maos_trocadas.png"
-dest_files=["res://.godot/imported/Img_maos_trocadas.png-f3567bfba72bd92c0095646db01b9d96.ctex"]
+source_file="res://game/shared/tutorial/assets/Img_mindinho.png"
+dest_files=["res://.godot/imported/Img_mindinho.png-d4d784174ba5768bbd627ab4feb3be93.ctex"]
 
 [params]
 

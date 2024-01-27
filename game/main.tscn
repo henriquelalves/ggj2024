@@ -1,7 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://culqaacu08vye"]
+[gd_scene load_steps=19 format=3 uid="uid://culqaacu08vye"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_i86db"]
 [ext_resource type="PackedScene" uid="uid://u3g8s4kck61t" path="res://game/transition/transition.tscn" id="2_xhsf2"]
+[ext_resource type="Script" path="res://game/instruction_popup.gd" id="3_lei0q"]
+[ext_resource type="Script" path="res://game/instruction_resource.gd" id="4_30kv1"]
+[ext_resource type="Texture2D" uid="uid://dv4646lxakb8d" path="res://game/shared/tutorial/assets/Img_maos_trocadas.png" id="4_xg44k"]
+[ext_resource type="Texture2D" uid="uid://b81bbfen65gm3" path="res://game/shared/tutorial/assets/Img_reverencia.png" id="5_lhn6w"]
+[ext_resource type="Texture2D" uid="uid://cxhuyyforfxwm" path="res://game/shared/tutorial/assets/Img_mindinho.png" id="6_go5ee"]
 
 [sub_resource type="Animation" id="Animation_q2678"]
 length = 0.001
@@ -37,6 +42,172 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_q2678"),
 "fade_in": SubResource("Animation_krlic")
+}
+
+[sub_resource type="Resource" id="Resource_o6d01"]
+script = ExtResource("4_30kv1")
+texture_zoeira = ExtResource("5_lhn6w")
+texture_instruction = ExtResource("5_lhn6w")
+type = 0
+title = "Head on Keyboard"
+label_1 = "Touch any key with your forehead"
+label_2 = "LIke doing a reverence to your love"
+
+[sub_resource type="Resource" id="Resource_sjq73"]
+script = ExtResource("4_30kv1")
+texture_zoeira = ExtResource("6_go5ee")
+texture_instruction = ExtResource("6_go5ee")
+type = 2
+title = "Only pinky"
+label_1 = "Only press keys using your pinkies"
+label_2 = "To strenghten the bond between you and your love"
+
+[sub_resource type="Resource" id="Resource_40y54"]
+script = ExtResource("4_30kv1")
+texture_zoeira = ExtResource("4_xg44k")
+texture_instruction = ExtResource("4_xg44k")
+type = 1
+title = "Inverted Hand"
+label_1 = "Use the mouse with your non-dominant hand"
+label_2 = "To train holding hands with your loved one"
+
+[sub_resource type="LabelSettings" id="LabelSettings_wskk0"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_wx7qq"]
+font_size = 32
+
+[sub_resource type="Animation" id="Animation_s35sg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%LabelTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%Label1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Label2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4nygo"]
+resource_name = "start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%LabelTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%Label1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Label2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljsnm"]
+_data = {
+"RESET": SubResource("Animation_s35sg"),
+"start": SubResource("Animation_4nygo")
 }
 
 [node name="Main" type="Node2D"]
@@ -79,4 +250,85 @@ color = Color(0, 0, 0, 1)
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_bnwsc")
+}
+
+[node name="InstructionLayer" type="CanvasLayer" parent="."]
+
+[node name="InstructionPopup" type="Control" parent="InstructionLayer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_lei0q")
+instructions = Array[ExtResource("4_30kv1")]([SubResource("Resource_o6d01"), SubResource("Resource_sjq73"), SubResource("Resource_40y54")])
+
+[node name="ColorRect" type="ColorRect" parent="InstructionLayer/InstructionPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.701961, 0.564706, 0.968627, 1)
+
+[node name="TextureZoeira" type="TextureRect" parent="InstructionLayer/InstructionPopup"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 28.0
+offset_top = 267.0
+offset_right = 399.0
+offset_bottom = 638.0
+texture = ExtResource("4_xg44k")
+
+[node name="TextureInstruction" type="TextureRect" parent="InstructionLayer/InstructionPopup"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 736.0
+offset_top = 17.0
+offset_right = 1107.0
+offset_bottom = 388.0
+texture = ExtResource("4_xg44k")
+
+[node name="LabelTitle" type="Label" parent="InstructionLayer/InstructionPopup"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 86.0
+offset_right = 539.0
+offset_bottom = 174.0
+text = "Replace Hands"
+label_settings = SubResource("LabelSettings_wskk0")
+
+[node name="Label1" type="Label" parent="InstructionLayer/InstructionPopup"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 419.0
+offset_top = 418.0
+offset_right = 1121.0
+offset_bottom = 506.0
+text = "Use your non-dominant hand with the mouse"
+label_settings = SubResource("LabelSettings_wx7qq")
+
+[node name="Label2" type="Label" parent="InstructionLayer/InstructionPopup"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 475.0
+offset_right = 1127.0
+offset_bottom = 615.0
+text = "To train not using one, but two hands with your loved one"
+label_settings = SubResource("LabelSettings_wx7qq")
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InstructionLayer/InstructionPopup"]
+libraries = {
+"": SubResource("AnimationLibrary_ljsnm")
 }

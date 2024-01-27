@@ -13,6 +13,10 @@ config_version=5
 run/main_scene="res://game/main.tscn"
 config/features=PackedStringArray("4.2")
 
+[autoload]
+
+Session="*res://session.gd"
+
 [display]
 
 window/stretch/mode="viewport"

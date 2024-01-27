@@ -11,6 +11,7 @@ var MICROGAMES = [
 @onready var microgame_viewport = %MicrogameViewport
 @onready var microgame_subviewport = %MicrogameSubViewport
 @onready var microgame_timer: Timer = %MicrogameTimer
+@onready var instruction_popup: InstructionPopup = %InstructionPopup
 
 var _current_microgame: Microgame
 var _starting = true
@@ -52,6 +53,10 @@ func _ready() -> void:
 		_current_microgame.process_mode = Node.PROCESS_MODE_DISABLED
 	
 		await transition.play_microgame_count(_microgame_count)
+		
+		if not Session.shown_types.has(_current_microgame.microgame_control):
+			await instruction_popup.play_instruction(_current_microgame.microgame_control)
+			Session.shown_types[_current_microgame.microgame_control] = true
 		
 		await transition.microgame_fade_in()
 		
