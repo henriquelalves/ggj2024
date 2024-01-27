@@ -1,39 +1,24 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dwwhh2i13kfs2"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dwwhh2i13kfs2"]
 
 [ext_resource type="Texture2D" uid="uid://6v31vl2mxbvb" path="res://game/shared/assets/namoradinha_sheet.png" id="1_4p1c3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hun5u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3c1g"]
 atlas = ExtResource("1_4p1c3")
-region = Rect2(0, 768, 256, 256)
+region = Rect2(0, 1024, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0ojse"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxqnv"]
 atlas = ExtResource("1_4p1c3")
-region = Rect2(256, 768, 256, 256)
+region = Rect2(512, 1024, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f022f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc2ne"]
 atlas = ExtResource("1_4p1c3")
-region = Rect2(0, 1024, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jq2tu"]
-atlas = ExtResource("1_4p1c3")
-region = Rect2(512, 768, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s0bvy"]
-atlas = ExtResource("1_4p1c3")
-region = Rect2(256, 1024, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_usu14"]
-atlas = ExtResource("1_4p1c3")
-region = Rect2(512, 1024, 256, 256)
+region = Rect2(1024, 1024, 512, 512)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hun5u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0ojse")
+"texture": SubResource("AtlasTexture_j3c1g")
 }],
 "loop": true,
 "name": &"default",
@@ -41,10 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f022f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jq2tu")
+"texture": SubResource("AtlasTexture_bxqnv")
 }],
 "loop": true,
 "name": &"happy",
@@ -52,10 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s0bvy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_usu14")
+"texture": SubResource("AtlasTexture_bc2ne")
 }],
 "loop": true,
 "name": &"mad",
