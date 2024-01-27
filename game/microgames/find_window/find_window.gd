@@ -16,3 +16,4 @@ func _microgame_ready():
 func _on_send_button_button_down():
 	%TextBoxMessage.hide()
 	%ChatMessage.show()
+	finished.emit(true)

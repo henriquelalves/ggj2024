@@ -7,7 +7,7 @@ var path = null
 @onready var kiss = %Kiss 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _microgame_ready():
 	var paths = $Paths.get_children()
 	var choose_path = randi_range(0, paths.size()-1)
 	print(choose_path)
@@ -34,3 +34,4 @@ func _on_hand_collision_area_shape_entered(area_rid, area, area_shape_index, loc
 		%PepeSprite.play("catch")
 		$BreCharacter.play("win")
 		kiss.queue_free()
+		finished.emit(true)

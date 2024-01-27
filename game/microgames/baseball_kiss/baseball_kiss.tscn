@@ -113,6 +113,9 @@ size = Vector2(44.9999, 42.6554)
 
 [node name="BaseballKiss" type="Node"]
 script = ExtResource("1_urxm5")
+microgame_control = 2
+instructions = "Catch the Kiss!"
+win_on_timeout = false
 
 [node name="ImgBackgroundWindows" type="Sprite2D" parent="."]
 position = Vector2(579, 324)
@@ -174,7 +177,7 @@ scale = Vector2(0.3, 0.3)
 curve = SubResource("Curve2D_hb7qp")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthLeft"]
-position = Vector2(-1751.22, -68.4032)
+position = Vector2(-1751.22, -68.4033)
 rotation = -0.271729
 progress = 3626.66
 
@@ -194,7 +197,7 @@ scale = Vector2(0.3, 0.3)
 curve = SubResource("Curve2D_bnyty")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthFarRight"]
-position = Vector2(1325.28, -141.12)
+position = Vector2(1325.28, -141.126)
 rotation = 1.51209
 progress = 3626.66
 
@@ -204,12 +207,10 @@ rotation = 0.125908
 scale = Vector2(0.3, 0.3)
 
 [node name="ImgKiss" type="Sprite2D" parent="Kiss"]
-scale = Vector2(1, 1)
 texture = ExtResource("6_j2h3k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss"]
 position = Vector2(1.44458, -1.86267)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_53xmk")
 
 [connection signal="area_shape_entered" from="PepeCharacter/HandCollision" to="." method="_on_hand_collision_area_shape_entered"]
