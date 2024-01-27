@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j0btxfrk2q8k"
-path="res://.godot/imported/Img_background_windows.png-6a41b282124a9b653e8037dad22b4661.ctex"
+uid="uid://cmomodj0c17sh"
+path="res://.godot/imported/Img_MSN_normal.png-3785ddf1ea7638740f1f2d04985743eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/shared/assets/Img_background_windows.png"
-dest_files=["res://.godot/imported/Img_background_windows.png-6a41b282124a9b653e8037dad22b4661.ctex"]
+source_file="res://game/microgames/find_window/assets/Img_MSN_normal.png"
+dest_files=["res://.godot/imported/Img_MSN_normal.png-3785ddf1ea7638740f1f2d04985743eb.ctex"]
 
 [params]
 

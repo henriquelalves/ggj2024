@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmomodj0c17sh"
-path="res://.godot/imported/Img_MSN_normal.png-658ea0f957216d504a5303bd67a7ed7b.ctex"
+uid="uid://bedu1tujmm2o4"
+path="res://.godot/imported/Img_bre_1.png-1e62232447389a27711b51941ab42631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/shared/assets/Img_MSN_normal.png"
-dest_files=["res://.godot/imported/Img_MSN_normal.png-658ea0f957216d504a5303bd67a7ed7b.ctex"]
+source_file="res://game/microgames/baseball_kiss/assets/Img_bre_1.png"
+dest_files=["res://.godot/imported/Img_bre_1.png-1e62232447389a27711b51941ab42631.ctex"]
 
 [params]
 
