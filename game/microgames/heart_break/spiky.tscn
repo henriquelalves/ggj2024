@@ -6,8 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xy8p"]
 size = Vector2(96.5, 90)
 
-[node name="Spiky" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="Spiky" type="CharacterBody2D"]
 script = ExtResource("1_fx3ld")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
