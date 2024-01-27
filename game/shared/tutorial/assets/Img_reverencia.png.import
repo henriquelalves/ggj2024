@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxhuyyforfxwm"
-path="res://.godot/imported/Img_mindinho.png-1a51041fcb89306f1c3af711bfe37f0d.ctex"
+uid="uid://b81bbfen65gm3"
+path="res://.godot/imported/Img_reverencia.png-08e49a22cd588fe808ab8c284eca7ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/microgames/tutorial/assets/Img_mindinho.png"
-dest_files=["res://.godot/imported/Img_mindinho.png-1a51041fcb89306f1c3af711bfe37f0d.ctex"]
+source_file="res://game/shared/tutorial/assets/Img_reverencia.png"
+dest_files=["res://.godot/imported/Img_reverencia.png-08e49a22cd588fe808ab8c284eca7ce1.ctex"]
 
 [params]
 
