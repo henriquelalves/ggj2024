@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8q2l65pajb3"]
+
+[ext_resource type="Script" path="res://game/microgames/find_window/find_window.gd" id="1_167ws"]
+[ext_resource type="Texture2D" uid="uid://j0btxfrk2q8k" path="res://game/microgames/find_window/assets/Img_background_windows.png" id="1_w06df"]
+[ext_resource type="Texture2D" uid="uid://7h0hokgsxon4" path="res://game/microgames/find_window/assets/Img_MSN_namoradinha.png" id="3_ekh6x"]
+[ext_resource type="Script" path="res://game/microgames/find_window/msn_girlfriend.gd" id="4_ithnb"]
+[ext_resource type="PackedScene" uid="uid://dxo3khe6emukf" path="res://game/microgames/find_window/msn_regular.tscn" id="4_t7t3v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_csx47"]
+font_color = Color(0.443137, 0.443137, 0.443137, 1)
+
+[node name="FindWindow" type="Node"]
+script = ExtResource("1_167ws")
+
+[node name="ImgBackgroundWindows" type="Sprite2D" parent="."]
+position = Vector2(578, 326)
+texture = ExtResource("1_w06df")
+
+[node name="AllWindows" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ImgMsnNamoradinha" type="TextureRect" parent="AllWindows"]
+visible = false
+layout_mode = 0
+offset_left = 288.0
+offset_top = 121.0
+offset_right = 906.0
+offset_bottom = 579.0
+texture = ExtResource("3_ekh6x")
+script = ExtResource("4_ithnb")
+
+[node name="SendButton" type="Button" parent="AllWindows/ImgMsnNamoradinha"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 380.0
+offset_right = 479.0
+offset_bottom = 430.0
+text = "ENVIAR"
+
+[node name="TextBoxMessage" type="Label" parent="AllWindows/ImgMsnNamoradinha"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 31.0
+offset_top = 370.0
+offset_right = 87.0
+offset_bottom = 393.0
+text = "I LUV U"
+label_settings = SubResource("LabelSettings_csx47")
+
+[node name="ChatMessage" type="Label" parent="AllWindows/ImgMsnNamoradinha"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 183.0
+offset_right = 85.0
+offset_bottom = 206.0
+text = "I LUV U"
+label_settings = SubResource("LabelSettings_csx47")
+
+[node name="ImgMsnNormal" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 44.0
+offset_top = 98.0
+offset_right = 662.0
+offset_bottom = 556.0
+
+[node name="ImgMsnNormal2" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 434.0
+offset_top = 84.0
+offset_right = 1052.0
+offset_bottom = 542.0
+
+[node name="ImgMsnNormal3" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 349.0
+offset_top = 104.0
+offset_right = 967.0
+offset_bottom = 562.0
+
+[node name="ImgMsnNormal4" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal5" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal6" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal7" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgMsnNormal8" parent="AllWindows" instance=ExtResource("4_t7t3v")]
+visible = false
+layout_mode = 0
+offset_left = 258.0
+offset_top = 162.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="button_down" from="AllWindows/ImgMsnNamoradinha/SendButton" to="." method="_on_send_button_button_down"]

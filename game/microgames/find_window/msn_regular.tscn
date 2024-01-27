@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxo3khe6emukf"]
+
+[ext_resource type="Texture2D" uid="uid://cmomodj0c17sh" path="res://game/microgames/find_window/assets/Img_MSN_normal.png" id="1_55ksy"]
+[ext_resource type="Script" path="res://game/microgames/find_window/msn_regular.gd" id="2_m5374"]
+
+[node name="ImgMsnNormal" type="TextureRect"]
+texture = ExtResource("1_55ksy")
+script = ExtResource("2_m5374")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.918
+anchor_top = 0.039
+anchor_right = 0.918
+anchor_bottom = 0.039
+offset_left = -50.324
+offset_top = -18.862
+offset_right = 49.676
+offset_bottom = 31.138
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
