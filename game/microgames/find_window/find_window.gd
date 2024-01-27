@@ -2,7 +2,7 @@ extends Microgame
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _microgame_ready():
 	var windows = $AllWindows.get_children()
 	var max_windows = windows.size() - randi_range(0,2)
 	for i in max_windows:

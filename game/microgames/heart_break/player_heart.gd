@@ -13,5 +13,4 @@ func _physics_process(delta):
 	if(playerControl):
 		var moveVector = Vector2(Input.get_axis("Left","Right")*speed, Input.get_axis("Up","Down")*speed)
 		apply_force(moveVector)
-		#set_axis_velocity(moveVector)
 	pass

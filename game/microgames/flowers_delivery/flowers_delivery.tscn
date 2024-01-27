@@ -54,8 +54,3 @@ transform = Transform3D(10, 0, 0, 0, 0.4, 0, 0, 0, 1, 1.5768, 2.47888, 7.67072)
 modulate = Color(1, 0.301961, 0.231373, 1)
 pixel_size = 1.0
 texture = ExtResource("6_omk1m")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
-autostart = true
