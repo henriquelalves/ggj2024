@@ -3,22 +3,41 @@ extends Node2D
 
 @export var speed_scale = 1.0
 
+signal finished_animation
+
 @onready var animation_player = %AnimationPlayer
 @onready var microgame_viewport_container = %MicrogameViewportContainer
 
-signal finished
-signal microgame_viewport_hidden
+var _lives = 0
+var _characters = []
 
 
 func _ready() -> void:
 	animation_player.speed_scale = speed_scale
+	_characters = %Characters.get_children()
+	animation_player.play("RESET")
 
 
-func _emit_microgame_viewport_hidden() -> void:
-	microgame_viewport_hidden.emit()
-
-
-func show_win_animation():
-	animation_player.play("win_transition")
+func microgame_fade_out():
+	animation_player.play("microgame_fade_out")
 	await animation_player.animation_finished
-	finished.emit()
+
+
+func microgame_fade_in():
+	animation_player.play_backwards("microgame_fade_out")
+	await animation_player.animation_finished
+
+
+func play_microgame_count(count: int):
+	%MicrogameCountLabel.text = "%03d" % count
+	animation_player.play("show_microgame_count")
+	await animation_player.animation_finished
+
+
+func play_result_animation(won : bool) -> void:
+	for c in _characters:
+		if (won):
+			c.play_happy()
+		else:
+			c.play_mad()
+	await get_tree().create_timer(0.5).timeout
