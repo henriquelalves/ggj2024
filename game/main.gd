@@ -21,6 +21,8 @@ func _ready() -> void:
 	microgame_viewport.offset_right = 0
 	microgame_viewport.offset_top = 0
 	
+	transition.reset()
+	
 	while true:
 		if _current_microgame != null:
 			_current_microgame.process_mode = Node.PROCESS_MODE_DISABLED

@@ -15,7 +15,12 @@ var _characters = []
 func _ready() -> void:
 	animation_player.speed_scale = speed_scale
 	_characters = %Characters.get_children()
+
+
+func reset() -> void:
 	animation_player.play("RESET")
+	for c in _characters:
+		c._reset_animation()
 
 
 func microgame_fade_out():

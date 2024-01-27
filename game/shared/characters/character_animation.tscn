@@ -10,3 +10,4 @@ sprite_frames = ExtResource("2_pffd0")
 [node name="CharacterAnimatedSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = ExtResource("2_pffd0")
+animation = &"mad"
