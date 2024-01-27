@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://k0mx61qjphst"]
 
-[ext_resource type="SpriteFrames" uid="uid://c5j2ojumuirph" path="res://game/microgames/heart_break/assets/heart_animation.tres" id="1_utnrb"]
-
+[ext_resource type="SpriteFrames" uid="uid://c5j2ojumuirph" path="res://game/shared/characters/heart_animation.tres" id="1_utnrb"]
 
 [node name="CharacterAnimation" type="Node2D"]
 
