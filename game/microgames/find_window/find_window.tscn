@@ -26,7 +26,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ImgMsnNamoradinha" type="TextureRect" parent="AllWindows"]
-visible = false
 layout_mode = 0
 offset_left = 288.0
 offset_top = 121.0
@@ -41,7 +40,7 @@ offset_left = 352.0
 offset_top = 380.0
 offset_right = 479.0
 offset_bottom = 430.0
-text = "ENVIAR"
+text = "SEND"
 
 [node name="TextBoxMessage" type="Label" parent="AllWindows/ImgMsnNamoradinha"]
 unique_name_in_owner = true
