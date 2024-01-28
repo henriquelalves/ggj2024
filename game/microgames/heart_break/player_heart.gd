@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var speed = 250
+var speed = 400
 var playerControl = true
 
 # Called when the node enters the scene tree for the first time.

@@ -45,18 +45,15 @@ position = Vector2(574, 0)
 shape = SubResource("RectangleShape2D_upktn")
 
 [node name="Spiky" parent="." instance=ExtResource("3_dfa23")]
-position = Vector2(182, 188)
+position = Vector2(307, 95)
 
 [node name="Spiky2" parent="." instance=ExtResource("3_dfa23")]
-position = Vector2(964, 218)
+position = Vector2(878, 181)
 
 [node name="Spiky3" parent="." instance=ExtResource("3_dfa23")]
-position = Vector2(235, 481)
+position = Vector2(249, 490)
 
 [node name="Spiky4" parent="." instance=ExtResource("3_dfa23")]
-position = Vector2(845, 496)
-
-[node name="Spiky5" parent="." instance=ExtResource("3_dfa23")]
-position = Vector2(570, 104)
+position = Vector2(821, 525)
 
 [connection signal="body_entered" from="PlayerHeart" to="." method="_on_player_heart_body_entered"]
