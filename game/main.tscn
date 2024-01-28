@@ -284,6 +284,8 @@ stretch = true
 [node name="MicrogameSubViewport" type="SubViewport" parent="MicrogameViewport"]
 unique_name_in_owner = true
 handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
 size = Vector2i(2, 2)
 render_target_update_mode = 4
 

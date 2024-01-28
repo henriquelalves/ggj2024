@@ -2,9 +2,9 @@ extends Node2D
 
 var MICROGAMES = [
 	preload("res://game/microgames/flowers_delivery/flowers_delivery.tscn"),
-	#preload("res://game/microgames/heart_break/heart_break.tscn"),
-	#preload("res://game/microgames/find_window/find_window.tscn"),
-	#preload("res://game/microgames/baseball_kiss/baseball_kiss.tscn")
+	preload("res://game/microgames/heart_break/heart_break.tscn"),
+	preload("res://game/microgames/find_window/find_window.tscn"),
+	preload("res://game/microgames/baseball_kiss/baseball_kiss.tscn")
 	]
 
 @onready var transition: Transition = %Transition

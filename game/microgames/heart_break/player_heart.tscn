@@ -23,4 +23,5 @@ autoplay = "default"
 shape = SubResource("CircleShape2D_sp11c")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("3_rntdb")
