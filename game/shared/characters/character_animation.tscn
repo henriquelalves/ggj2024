@@ -1,7 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://k0mx61qjphst"]
+[gd_scene load_steps=11 format=3 uid="uid://k0mx61qjphst"]
 
 [ext_resource type="Script" path="res://game/shared/characters/character_animation.gd" id="1_qpodi"]
 [ext_resource type="SpriteFrames" uid="uid://dbwmqcig0qbw8" path="res://game/shared/characters/ali_animation.tres" id="2_pffd0"]
+[ext_resource type="Texture2D" uid="uid://btylon72bklla" path="res://game/shared/assets/explosion_sheet.png" id="3_ku7qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mogqv"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkrct"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5rq3"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cexmg"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(0, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmwba"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(250, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb2np"]
+atlas = ExtResource("3_ku7qd")
+region = Rect2(500, 250, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dufu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mogqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkrct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5rq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cexmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmwba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb2np")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="CharacterAnimation" type="Node2D"]
 script = ExtResource("1_qpodi")
@@ -10,3 +64,8 @@ sprite_frames = ExtResource("2_pffd0")
 [node name="CharacterAnimatedSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = ExtResource("2_pffd0")
+
+[node name="Explosion" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(1.408, 1.408)
+sprite_frames = SubResource("SpriteFrames_7dufu")

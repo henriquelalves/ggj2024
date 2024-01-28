@@ -18,7 +18,7 @@ var _starting = true
 var _won_last_microgame = false
 var _microgame_count = 1
 var _microgame_idx = 0
-
+var lives = 4
 
 func _ready() -> void:
 	randomize()
@@ -43,7 +43,18 @@ func _ready() -> void:
 			_current_microgame.queue_free()
 			
 			await transition.play_result_animation(_won_last_microgame)
-		
+			
+			if not _won_last_microgame:
+				await get_tree().create_timer(0.5).timeout 
+				transition.lose_life()
+				lives -= 1
+				
+				if lives == 0:
+					await get_tree().create_timer(0.5).timeout 
+					%FadeAnimationPlayer.play_backwards("fade_in")
+					await %FadeAnimationPlayer.animation_finished
+					get_tree().change_scene_to_file("res://game/menu.tscn")
+					
 		_current_microgame = MICROGAMES[_microgame_idx].instantiate()
 		_microgame_idx = (_microgame_idx + 1) % MICROGAMES.size()
 		if _microgame_idx == 0:
@@ -54,11 +65,14 @@ func _ready() -> void:
 	
 		await transition.play_microgame_count(_microgame_count)
 		
-		#if not Session.shown_types.has(_current_microgame.microgame_control):
-			#await instruction_popup.play_instruction(_current_microgame.microgame_control)
-			#Session.shown_types[_current_microgame.microgame_control] = true
+		if not Session.shown_types.has(_current_microgame.microgame_control):
+			await instruction_popup.play_instruction(_current_microgame.microgame_control)
+			Session.shown_types[_current_microgame.microgame_control] = true
+		
+		await transition.show_instruction(instruction_popup.get_instruction(_current_microgame.microgame_control))
 		
 		await transition.microgame_fade_in()
+		
 		%MicrogameTvTimer.play()
 		_current_microgame.process_mode = Node.PROCESS_MODE_INHERIT
 		

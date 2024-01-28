@@ -10,17 +10,29 @@ signal finished_animation
 
 var _lives = 0
 var _characters = []
-
+var _life = 0
 
 func _ready() -> void:
 	animation_player.speed_scale = speed_scale
 	_characters = %Characters.get_children()
 
 
+func lose_life():
+	_characters[_life].play_puff()
+	_life += 1
+
+
 func reset() -> void:
 	animation_player.play("RESET")
 	for c in _characters:
 		c._reset_animation()
+
+
+func show_instruction(instruction: InstructionResource):
+	%InstructionTexture.texture = instruction.texture_instruction
+	%InstructionLabel.text = instruction.title
+	animation_player.play("instruction")
+	await animation_player.animation_finished
 
 
 func microgame_fade_out():

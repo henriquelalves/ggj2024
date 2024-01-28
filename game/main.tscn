@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://culqaacu08vye"]
+[gd_scene load_steps=33 format=3 uid="uid://culqaacu08vye"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_i86db"]
 [ext_resource type="PackedScene" uid="uid://u3g8s4kck61t" path="res://game/transition/transition.tscn" id="2_xhsf2"]
@@ -6,8 +6,11 @@
 [ext_resource type="Script" path="res://game/instruction_resource.gd" id="4_30kv1"]
 [ext_resource type="Texture2D" uid="uid://dv4646lxakb8d" path="res://game/shared/tutorial/assets/Img_maos_trocadas.png" id="4_xg44k"]
 [ext_resource type="Texture2D" uid="uid://b81bbfen65gm3" path="res://game/shared/tutorial/assets/Img_reverencia.png" id="5_lhn6w"]
+[ext_resource type="Texture2D" uid="uid://d1j7603pam2ni" path="res://game/shared/tutorial/assets/Img_reverencia_key.png" id="5_wr8ki"]
 [ext_resource type="Texture2D" uid="uid://cxhuyyforfxwm" path="res://game/shared/tutorial/assets/Img_mindinho.png" id="6_go5ee"]
+[ext_resource type="Texture2D" uid="uid://c5yrembbyndn1" path="res://game/shared/tutorial/assets/Img_mindinho_key.png" id="7_f5nm5"]
 [ext_resource type="Script" path="res://game/microgame_timer.gd" id="8_ygcq8"]
+[ext_resource type="Texture2D" uid="uid://qf4u4kat18k7" path="res://game/shared/tutorial/assets/Img_maos_trocadas_mouse.png" id="9_unnor"]
 [ext_resource type="Texture2D" uid="uid://n0sv45rq3u1d" path="res://game/shared/timer/5.png" id="9_yhgor"]
 [ext_resource type="Texture2D" uid="uid://cfur1citqmkd1" path="res://game/shared/timer/4.png" id="10_v6xue"]
 [ext_resource type="Texture2D" uid="uid://bt58qlhtr7b4d" path="res://game/shared/timer/3.png" id="11_gpmug"]
@@ -55,7 +58,7 @@ _data = {
 [sub_resource type="Resource" id="Resource_o6d01"]
 script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("5_lhn6w")
-texture_instruction = ExtResource("5_lhn6w")
+texture_instruction = ExtResource("5_wr8ki")
 type = 0
 title = "Head on Keyboard"
 label_1 = "Touch any key with your forehead"
@@ -64,7 +67,7 @@ label_2 = "LIke doing a reverence to your love"
 [sub_resource type="Resource" id="Resource_sjq73"]
 script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("6_go5ee")
-texture_instruction = ExtResource("6_go5ee")
+texture_instruction = ExtResource("7_f5nm5")
 type = 2
 title = "Only pinky"
 label_1 = "Only press keys using your pinkies"
@@ -73,7 +76,7 @@ label_2 = "To strenghten the bond between you and your love"
 [sub_resource type="Resource" id="Resource_40y54"]
 script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("4_xg44k")
-texture_instruction = ExtResource("4_xg44k")
+texture_instruction = ExtResource("9_unnor")
 type = 1
 title = "Inverted Hand"
 label_1 = "Use the mouse with your non-dominant hand"
@@ -218,6 +221,21 @@ _data = {
 "start": SubResource("Animation_4nygo")
 }
 
+[sub_resource type="Animation" id="Animation_0006q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 722)]
+}
+
 [sub_resource type="Animation" id="Animation_y56np"]
 resource_name = "enter"
 length = 0.5
@@ -232,21 +250,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.267943, 0.267943),
 "update": 0,
 "values": [Vector2(125, 722), Vector2(125, 547)]
-}
-
-[sub_resource type="Animation" id="Animation_0006q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(125, 722)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m05d7"]

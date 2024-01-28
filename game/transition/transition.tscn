@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://u3g8s4kck61t"]
+[gd_scene load_steps=18 format=3 uid="uid://u3g8s4kck61t"]
 
 [ext_resource type="Script" path="res://game/transition/transition.gd" id="1_vtfth"]
 [ext_resource type="PackedScene" uid="uid://k0mx61qjphst" path="res://game/shared/characters/character_animation.tscn" id="2_2nft6"]
@@ -7,11 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://6v31vl2mxbvb" path="res://game/shared/assets/namoradinha_sheet.png" id="4_wxw0m"]
 [ext_resource type="SpriteFrames" uid="uid://jvyw0cu710vo" path="res://game/shared/characters/kit_animation.tres" id="5_l50r6"]
 [ext_resource type="SpriteFrames" uid="uid://dwwhh2i13kfs2" path="res://game/shared/characters/mi_animation.tres" id="6_eiuh1"]
+[ext_resource type="Texture2D" uid="uid://d1dtbc4srhlpl" path="res://game/shared/timer/Img_timer_1.png" id="8_m0riw"]
+[ext_resource type="Texture2D" uid="uid://qf4u4kat18k7" path="res://game/shared/tutorial/assets/Img_maos_trocadas_mouse.png" id="9_6mo81"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wobn0"]
 font = ExtResource("2_phg5r")
 font_size = 80
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yb2o1"]
+font = ExtResource("2_phg5r")
+font_size = 48
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_gf6gi"]
 length = 0.001
@@ -98,6 +106,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(982, 389)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Foreground/InstructionTv:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-444, 91)]
 }
 
 [sub_resource type="Animation" id="Animation_67853"]
@@ -270,9 +290,26 @@ tracks/4/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_5h20a"]
+resource_name = "instruction"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/InstructionTv:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.3, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-444, 91), Vector2(382, 91), Vector2(382, 91), Vector2(1195, 91)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_en0c8"]
 _data = {
 "RESET": SubResource("Animation_gf6gi"),
+"instruction": SubResource("Animation_5h20a"),
 "microgame_fade_out": SubResource("Animation_67853"),
 "show_microgame_count": SubResource("Animation_8isba"),
 "win_transition": SubResource("Animation_lm0of")
@@ -342,10 +379,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 5695.0
-offset_top = 2800.0
-offset_right = 5931.0
-offset_bottom = 2910.0
+offset_left = 7999.0
+offset_top = 4096.0
+offset_right = 8235.0
+offset_bottom = 4206.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "blabla"
@@ -411,6 +448,35 @@ texture = ExtResource("4_wxw0m")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 3
 vframes = 5
+
+[node name="InstructionTv" type="TextureRect" parent="Foreground"]
+offset_left = -444.0
+offset_top = 91.0
+offset_right = -47.0
+offset_bottom = 488.0
+texture = ExtResource("8_m0riw")
+
+[node name="InstructionTexture" type="TextureRect" parent="Foreground/InstructionTv"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 103.0
+offset_top = 125.0
+offset_right = 248.0
+offset_bottom = 270.0
+texture = ExtResource("9_6mo81")
+expand_mode = 1
+
+[node name="InstructionLabel" type="Label" parent="Foreground/InstructionTv"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -94.0
+offset_top = 349.0
+offset_right = 475.0
+offset_bottom = 398.0
+text = "Inverted Hand"
+label_settings = SubResource("LabelSettings_yb2o1")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

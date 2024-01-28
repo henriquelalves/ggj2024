@@ -18,6 +18,12 @@ func _reset_animation():
 	animated_sprite.animation = "default"
 
 
+func play_puff():
+	$Explosion.show()
+	$Explosion.play("default")
+	$CharacterAnimatedSprite.hide()
+
+
 func play_happy():
 	animated_sprite.animation = "happy"
 	var tween = create_tween()
