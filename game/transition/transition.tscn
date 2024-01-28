@@ -120,6 +120,22 @@ tracks/7/keys = {
 "values": [Vector2(-444, 91)]
 }
 
+[sub_resource type="Animation" id="Animation_5h20a"]
+resource_name = "instruction"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/InstructionTv:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.3, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-444, 91), Vector2(382, 91), Vector2(382, 91), Vector2(1195, 91)]
+}
+
 [sub_resource type="Animation" id="Animation_67853"]
 resource_name = "microgame_fade_out"
 length = 0.5
@@ -288,22 +304,6 @@ tracks/4/keys = {
 "args": [],
 "method": &"_emit_microgame_viewport_hidden"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_5h20a"]
-resource_name = "instruction"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/InstructionTv:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1.3, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-444, 91), Vector2(382, 91), Vector2(382, 91), Vector2(1195, 91)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_en0c8"]

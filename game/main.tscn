@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://culqaacu08vye"]
+[gd_scene load_steps=36 format=3 uid="uid://culqaacu08vye"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_i86db"]
 [ext_resource type="PackedScene" uid="uid://u3g8s4kck61t" path="res://game/transition/transition.tscn" id="2_xhsf2"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://vme6xl77c48e" path="res://game/shared/timer/1.png" id="13_mb5n2"]
 [ext_resource type="Texture2D" uid="uid://d1dtbc4srhlpl" path="res://game/shared/timer/Img_timer_1.png" id="14_e5s51"]
 [ext_resource type="PackedScene" uid="uid://bqbngfstmish5" path="res://game/shared/explosion/explosion.tscn" id="15_macy5"]
+[ext_resource type="FontFile" uid="uid://den305djdhip6" path="res://game/shared/assets/SingleDay-Regular.ttf" id="19_vtcb7"]
+[ext_resource type="Script" path="res://game/MicrogameInstructionLabel.gd" id="20_375k7"]
 
 [sub_resource type="Animation" id="Animation_q2678"]
 length = 0.001
@@ -258,6 +260,12 @@ _data = {
 "enter": SubResource("Animation_y56np")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_83xq3"]
+font = ExtResource("19_vtcb7")
+font_size = 64
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_i86db")
 
@@ -407,3 +415,23 @@ frame_progress = 0.440763
 libraries = {
 "": SubResource("AnimationLibrary_m05d7")
 }
+
+[node name="MicrogameInstructionLabel" type="Label" parent="ForegroundLayer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -573.0
+offset_top = -24.0
+offset_right = 573.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rasdasdasdasdas"
+label_settings = SubResource("LabelSettings_83xq3")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("20_375k7")

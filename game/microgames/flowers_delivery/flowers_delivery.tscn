@@ -32,6 +32,7 @@ animations = [{
 
 [node name="FlowersDelivery" type="Node3D"]
 script = ExtResource("1_jhoh1")
+instructions = "Meet your girlfriend!"
 
 [node name="Girlfriend" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45863, 1.42701, 0)

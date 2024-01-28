@@ -12,6 +12,7 @@ font_color = Color(0.443137, 0.443137, 0.443137, 1)
 [node name="FindWindow" type="Node"]
 script = ExtResource("1_167ws")
 microgame_control = 1
+instructions = "Send the message!"
 win_on_timeout = false
 
 [node name="ImgBackgroundWindows" type="Sprite2D" parent="."]

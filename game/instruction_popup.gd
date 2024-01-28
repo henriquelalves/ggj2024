@@ -18,7 +18,6 @@ func play_instruction(type: Microgame.MICROGAME_CONTROL):
 
 func get_instruction(type: Microgame.MICROGAME_CONTROL) -> InstructionResource:
 	for instruction in instructions:
-		print(instruction.type)
 		if instruction.type == type:
 			return instruction
 	return null

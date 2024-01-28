@@ -69,7 +69,10 @@ func _ready() -> void:
 			await instruction_popup.play_instruction(_current_microgame.microgame_control)
 			Session.shown_types[_current_microgame.microgame_control] = true
 		
-		await transition.show_instruction(instruction_popup.get_instruction(_current_microgame.microgame_control))
+		var instruction_resource = instruction_popup.get_instruction(_current_microgame.microgame_control)
+		await transition.show_instruction(instruction_resource)
+		
+		%MicrogameInstructionLabel.show_instruction(_current_microgame.instructions)
 		
 		await transition.microgame_fade_in()
 		

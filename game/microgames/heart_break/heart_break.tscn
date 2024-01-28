@@ -13,6 +13,7 @@ size = Vector2(20, 676)
 [node name="HeartBreak" type="Node"]
 script = ExtResource("1_ia77r")
 microgame_control = 2
+instructions = "Dont break her heart!"
 
 [node name="PlayerHeart" parent="." instance=ExtResource("2_uwtaj")]
 position = Vector2(553, 317)
