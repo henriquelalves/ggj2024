@@ -59,7 +59,8 @@ func _ready() -> void:
 					await get_tree().create_timer(0.5).timeout 
 					%FadeAnimationPlayer.play_backwards("fade_in")
 					await %FadeAnimationPlayer.animation_finished
-					get_tree().change_scene_to_file("res://game/menu.tscn")
+					Session.last_score = _microgame_count
+					get_tree().change_scene_to_file("res://game/score.tscn")
 					
 		_current_microgame = MICROGAMES[_microgame_idx].instantiate()
 		_microgame_idx = (_microgame_idx + 1) % MICROGAMES.size()

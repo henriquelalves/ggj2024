@@ -60,7 +60,7 @@ sky = SubResource("Sky_4ims1")
 
 [node name="FlowersDelivery" type="Node3D"]
 script = ExtResource("1_jhoh1")
-instructions = "Meet your girlfriend!"
+instructions = "Chegue à sua namorada!"
 
 [node name="Girlfriend" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45863, 1.42701, 0)
@@ -69,7 +69,7 @@ texture = ExtResource("1_isthg")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55688, 3.35267, 7.68148)
-text = "Get Down!"
+text = "Se Abaixe!"
 font_size = 200
 outline_size = 48
 

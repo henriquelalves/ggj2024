@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvjimat8d7liw"]
+[gd_scene load_steps=7 format=3 uid="uid://bvjimat8d7liw"]
 
 [ext_resource type="Script" path="res://game/menu.gd" id="1_24jgf"]
+[ext_resource type="Texture2D" uid="uid://clh3o1ygmnbld" path="res://game/shared/assets/GGJ_mainmenuart.png" id="2_onepc"]
 [ext_resource type="AudioStream" uid="uid://dgypuqc63dc42" path="res://game/shared/assets/GGJ_mainmenu.ogg" id="2_w8s3m"]
 
 [sub_resource type="Animation" id="Animation_amao6"]
@@ -48,6 +49,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_24jgf")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_onepc")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

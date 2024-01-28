@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://u3g8s4kck61t"]
+[gd_scene load_steps=19 format=3 uid="uid://u3g8s4kck61t"]
 
 [ext_resource type="Script" path="res://game/transition/transition.gd" id="1_vtfth"]
 [ext_resource type="PackedScene" uid="uid://k0mx61qjphst" path="res://game/shared/characters/character_animation.tscn" id="2_2nft6"]
+[ext_resource type="Texture2D" uid="uid://clh3o1ygmnbld" path="res://game/shared/assets/GGJ_mainmenuart.png" id="2_an0e0"]
 [ext_resource type="FontFile" uid="uid://den305djdhip6" path="res://game/shared/assets/SingleDay-Regular.ttf" id="2_phg5r"]
 [ext_resource type="SpriteFrames" uid="uid://bosng2x2w205a" path="res://game/shared/characters/fro_animation.tres" id="3_gxf7f"]
 [ext_resource type="Texture2D" uid="uid://6v31vl2mxbvb" path="res://game/shared/assets/namoradinha_sheet.png" id="4_wxw0m"]
@@ -26,98 +27,98 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
+tracks/0/path = NodePath("Foreground/ViewportContainer:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(432, 220)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Foreground/ViewportContainer:size")
+tracks/1/path = NodePath("Foreground/ViewportContainer:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(432, 220)]
+"values": [Vector2(360, 68)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Foreground/ViewportContainer:position")
+tracks/2/path = NodePath("Foreground/Characters/CharacterAnimation:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(360, 68)]
+"values": [Vector2(338, 305)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation:position")
+tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(338, 305)]
+"values": [Vector2(163, 386)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
+tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(163, 386)]
+"values": [Vector2(820, 306)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
+tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(820, 306)]
+"values": [Vector2(982, 389)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
+tracks/6/path = NodePath("Foreground/InstructionTv:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(982, 389)]
+"values": [Vector2(-444, 91)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Foreground/InstructionTv:position")
+tracks/7/path = NodePath("Foreground/ViewportContainer/ColorRect:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-444, 91)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_5h20a"]
@@ -142,86 +143,86 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
+tracks/0/path = NodePath("Foreground/ViewportContainer:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Vector2(1152, 648), Vector2(432, 220)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Foreground/ViewportContainer:size")
+tracks/1/path = NodePath("Foreground/ViewportContainer:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1152, 648), Vector2(432, 220)]
+"values": [Vector2(0, 0), Vector2(360, 68)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Foreground/ViewportContainer:position")
+tracks/2/path = NodePath("Foreground/Characters/CharacterAnimation:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(360, 68)]
+"values": [Vector2(-158, 449), Vector2(338, 305)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation:position")
+tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-158, 449), Vector2(338, 305)]
+"values": [Vector2(-333, 530), Vector2(163, 386)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
+tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-333, 530), Vector2(163, 386)]
+"values": [Vector2(1340, 468), Vector2(820, 306)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
+tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1340, 468), Vector2(820, 306)]
+"values": [Vector2(1502, 551), Vector2(982, 389)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
+tracks/6/path = NodePath("Foreground/ViewportContainer/ColorRect:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1502, 551), Vector2(982, 389)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_8isba"]
@@ -347,8 +348,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 360.0
 offset_top = 68.0
-offset_right = 792.0
-offset_bottom = 288.0
+offset_right = -360.0
+offset_bottom = -360.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -363,7 +364,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="Foreground/ViewportContainer"]
+[node name="ColorRect" type="TextureRect" parent="Foreground/ViewportContainer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -371,6 +372,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+texture = ExtResource("2_an0e0")
+expand_mode = 1
 
 [node name="MicrogameCountLabel" type="Label" parent="Foreground"]
 unique_name_in_owner = true

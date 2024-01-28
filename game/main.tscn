@@ -69,27 +69,27 @@ script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("5_lhn6w")
 texture_instruction = ExtResource("5_wr8ki")
 type = 0
-title = "Head on Keyboard"
-label_1 = "Touch any key with your forehead"
-label_2 = "LIke doing a reverence to your love"
+title = "Cabeça no Teclado"
+label_1 = "Encoste em qualquer tecla com a testa,"
+label_2 = "fazendo uma reverência ao seu amor"
 
 [sub_resource type="Resource" id="Resource_sjq73"]
 script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("6_go5ee")
 texture_instruction = ExtResource("7_f5nm5")
 type = 2
-title = "Only pinky"
-label_1 = "Only press keys using your pinkies"
-label_2 = "To strenghten the bond between you and your love"
+title = "Só os mindinhos"
+label_1 = "Apenas use os mindinhos no teclado,"
+label_2 = "para fortalecer o laço com seu amor"
 
 [sub_resource type="Resource" id="Resource_40y54"]
 script = ExtResource("4_30kv1")
 texture_zoeira = ExtResource("4_xg44k")
 texture_instruction = ExtResource("9_unnor")
 type = 1
-title = "Inverted Hand"
-label_1 = "Use the mouse with your non-dominant hand"
-label_2 = "To train holding hands with your loved one"
+title = "Mão Invertida"
+label_1 = "Use o mouse com sua mão não dominante,"
+label_2 = "para treinar andar de mãos dadas com seu amor"
 
 [sub_resource type="LabelSettings" id="LabelSettings_wskk0"]
 font_size = 64

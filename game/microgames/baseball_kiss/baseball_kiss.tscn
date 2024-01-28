@@ -115,7 +115,7 @@ size = Vector2(44.9999, 42.6554)
 [node name="BaseballKiss" type="Node"]
 script = ExtResource("1_urxm5")
 microgame_control = 2
-instructions = "Catch the Kiss!"
+instructions = "Pegue o beijinho!"
 win_on_timeout = false
 
 [node name="ImgBackgroundWindows" type="Sprite2D" parent="."]
