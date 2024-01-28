@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxxawcp2cuijl"]
+[gd_scene load_steps=16 format=3 uid="uid://cxxawcp2cuijl"]
 
 [ext_resource type="Texture2D" uid="uid://dbohkvl4ryqbk" path="res://game/microgames/flowers_delivery/assets/girlfriend.png" id="1_isthg"]
 [ext_resource type="Script" path="res://game/microgames/flowers_delivery/flowers_delivery.gd" id="1_jhoh1"]
@@ -30,6 +30,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_14drw"]
+radius = 0.592209
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k71dv"]
+size = Vector3(1, 1, 0.189453)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdus0"]
+albedo_color = Color(0.360784, 0.388235, 0.121569, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xy5s1"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qo3aw"]
+sky_top_color = Color(0.317647, 0.333333, 0.976471, 1)
+sky_horizon_color = Color(0.556863, 0.639216, 0.929412, 1)
+sky_curve = 0.0803831
+ground_bottom_color = Color(0.478431, 0.54902, 0.992157, 1)
+ground_horizon_color = Color(0.556863, 0.639216, 0.929412, 1)
+ground_curve = 0.970057
+
+[sub_resource type="Sky" id="Sky_4ims1"]
+sky_material = SubResource("ProceduralSkyMaterial_qo3aw")
+
+[sub_resource type="Environment" id="Environment_lochx"]
+background_mode = 2
+sky = SubResource("Sky_4ims1")
+
 [node name="FlowersDelivery" type="Node3D"]
 script = ExtResource("1_jhoh1")
 instructions = "Meet your girlfriend!"
@@ -38,6 +65,12 @@ instructions = "Meet your girlfriend!"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45863, 1.42701, 0)
 billboard = 1
 texture = ExtResource("1_isthg")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55688, 3.35267, 7.68148)
+text = "Get Down!"
+font_size = 200
+outline_size = 48
 
 [node name="Player" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 13.663)
@@ -50,8 +83,27 @@ script = ExtResource("3_kgimw")
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(0.568531, 0.293446, -0.768545, 0, 0.934218, 0.356704, 0.822662, -0.202797, 0.531132, -3.65287, 1.74709, 2.17253)
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Area3D" type="Area3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.933393, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Area3D"]
+shape = SubResource("SphereShape3D_14drw")
+
+[node name="Obstacle" type="Sprite3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 0.4, 0, 0, 0, 1, 1.5768, 2.47888, 7.67072)
 modulate = Color(1, 0.301961, 0.231373, 1)
 pixel_size = 1.0
 texture = ExtResource("6_omk1m")
+
+[node name="Area3D" type="Area3D" parent="Obstacle"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle/Area3D"]
+shape = SubResource("BoxShape3D_k71dv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.900292, 0)
+material_override = SubResource("StandardMaterial3D_kdus0")
+mesh = SubResource("BoxMesh_xy5s1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lochx")
