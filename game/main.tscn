@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://culqaacu08vye"]
+[gd_scene load_steps=20 format=3 uid="uid://culqaacu08vye"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_i86db"]
 [ext_resource type="PackedScene" uid="uid://u3g8s4kck61t" path="res://game/transition/transition.tscn" id="2_xhsf2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dv4646lxakb8d" path="res://game/shared/tutorial/assets/Img_maos_trocadas.png" id="4_xg44k"]
 [ext_resource type="Texture2D" uid="uid://b81bbfen65gm3" path="res://game/shared/tutorial/assets/Img_reverencia.png" id="5_lhn6w"]
 [ext_resource type="Texture2D" uid="uid://cxhuyyforfxwm" path="res://game/shared/tutorial/assets/Img_mindinho.png" id="6_go5ee"]
+[ext_resource type="Texture2D" uid="uid://qf4u4kat18k7" path="res://game/shared/tutorial/assets/Img_maos_trocadas_mouse.png" id="8_lgnra"]
 
 [sub_resource type="Animation" id="Animation_q2678"]
 length = 0.001
@@ -292,7 +293,7 @@ offset_left = 736.0
 offset_top = 17.0
 offset_right = 1107.0
 offset_bottom = 388.0
-texture = ExtResource("4_xg44k")
+texture = ExtResource("8_lgnra")
 
 [node name="LabelTitle" type="Label" parent="InstructionLayer/InstructionPopup"]
 unique_name_in_owner = true
