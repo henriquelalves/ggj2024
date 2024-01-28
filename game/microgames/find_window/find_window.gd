@@ -17,3 +17,5 @@ func _on_send_button_button_down():
 	%TextBoxMessage.hide()
 	%ChatMessage.show()
 	finished.emit(true)
+	$Victory.pitch_scale = Engine.time_scale
+	$Victory.play()

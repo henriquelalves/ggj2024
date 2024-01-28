@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://culqaacu08vye"]
+[gd_scene load_steps=43 format=3 uid="uid://culqaacu08vye"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_i86db"]
 [ext_resource type="PackedScene" uid="uid://u3g8s4kck61t" path="res://game/transition/transition.tscn" id="2_xhsf2"]
@@ -14,12 +14,19 @@
 [ext_resource type="Texture2D" uid="uid://n0sv45rq3u1d" path="res://game/shared/timer/5.png" id="9_yhgor"]
 [ext_resource type="Texture2D" uid="uid://cfur1citqmkd1" path="res://game/shared/timer/4.png" id="10_v6xue"]
 [ext_resource type="Texture2D" uid="uid://bt58qlhtr7b4d" path="res://game/shared/timer/3.png" id="11_gpmug"]
+[ext_resource type="Texture2D" uid="uid://d02a8362doj7y" path="res://game/shared/tutorial/assets/Img_background_instrucoes.png" id="11_v5fki"]
 [ext_resource type="Texture2D" uid="uid://bu3mgglucxpjs" path="res://game/shared/timer/2.png" id="12_igwy3"]
 [ext_resource type="Texture2D" uid="uid://vme6xl77c48e" path="res://game/shared/timer/1.png" id="13_mb5n2"]
 [ext_resource type="Texture2D" uid="uid://d1dtbc4srhlpl" path="res://game/shared/timer/Img_timer_1.png" id="14_e5s51"]
 [ext_resource type="PackedScene" uid="uid://bqbngfstmish5" path="res://game/shared/explosion/explosion.tscn" id="15_macy5"]
 [ext_resource type="FontFile" uid="uid://den305djdhip6" path="res://game/shared/assets/SingleDay-Regular.ttf" id="19_vtcb7"]
 [ext_resource type="Script" path="res://game/MicrogameInstructionLabel.gd" id="20_375k7"]
+[ext_resource type="AudioStream" uid="uid://dgypuqc63dc42" path="res://game/shared/assets/GGJ_mainmenu.ogg" id="21_jt87d"]
+[ext_resource type="AudioStream" uid="uid://1h8sp7gicxnf" path="res://game/shared/assets/239595__xtrgamr__crowdbooing_01.wav" id="22_8v0p5"]
+[ext_resource type="AudioStream" uid="uid://cf2a4lljx4ewn" path="res://game/shared/assets/432874__xtrgamr__lfs_yaycheer.wav" id="23_1d5ic"]
+[ext_resource type="AudioStream" uid="uid://bhxutp70ragb0" path="res://game/shared/assets/GGJ_losegame.wav" id="24_bvjjt"]
+[ext_resource type="AudioStream" uid="uid://ddiw5ip0kw3ji" path="res://game/shared/assets/GGJ_beforeminigame.wav" id="25_pwjmx"]
+[ext_resource type="AudioStream" uid="uid://6es5it5d7hj4" path="res://game/shared/assets/GGJ_minigamebg.wav" id="26_bxqka"]
 
 [sub_resource type="Animation" id="Animation_q2678"]
 length = 0.001
@@ -86,9 +93,13 @@ label_2 = "To train holding hands with your loved one"
 
 [sub_resource type="LabelSettings" id="LabelSettings_wskk0"]
 font_size = 64
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wx7qq"]
 font_size = 32
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_s35sg"]
 length = 0.001
@@ -325,14 +336,14 @@ grow_vertical = 2
 script = ExtResource("3_lei0q")
 instructions = Array[ExtResource("4_30kv1")]([SubResource("Resource_o6d01"), SubResource("Resource_sjq73"), SubResource("Resource_40y54")])
 
-[node name="ColorRect" type="ColorRect" parent="ForegroundLayer/InstructionPopup"]
+[node name="ColorRect" type="TextureRect" parent="ForegroundLayer/InstructionPopup"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.701961, 0.564706, 0.968627, 1)
+texture = ExtResource("11_v5fki")
 
 [node name="TextureZoeira" type="TextureRect" parent="ForegroundLayer/InstructionPopup"]
 unique_name_in_owner = true
@@ -437,3 +448,28 @@ label_settings = SubResource("LabelSettings_83xq3")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("20_375k7")
+
+[node name="AudioMusic" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("21_jt87d")
+volume_db = -10.0
+
+[node name="AudioCrowdBooMicrogame" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("22_8v0p5")
+
+[node name="AudioCheer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("23_1d5ic")
+
+[node name="AudioCrowdBooLives" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("24_bvjjt")
+
+[node name="AudioBeforeMinigame" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("25_pwjmx")
+
+[node name="AudioMinigame" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("26_bxqka")

@@ -8,3 +8,4 @@ func _microgame_ready() -> void:
 
 func _on_died():
 	finished.emit(false)
+	$Lose.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://h4y7kn003ao1"]
+[gd_scene load_steps=23 format=3 uid="uid://h4y7kn003ao1"]
 
 [ext_resource type="Script" path="res://game/microgames/baseball_kiss/baseball_kiss.gd" id="1_urxm5"]
 [ext_resource type="Texture2D" uid="uid://1mnstkvhabph" path="res://game/microgames/baseball_kiss/assets/Img_background_windows.png" id="2_odjhy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://di8c7rl1lm62b" path="res://game/microgames/baseball_kiss/assets/Img_kiss.png" id="6_j2h3k"]
 [ext_resource type="Texture2D" uid="uid://cym248ma3nprt" path="res://game/microgames/baseball_kiss/assets/Img_bre_3.png" id="6_j64wj"]
 [ext_resource type="Texture2D" uid="uid://b4mybwt5qhyfv" path="res://game/microgames/baseball_kiss/assets/Img_pepe_2.png" id="7_nvi3g"]
+[ext_resource type="AudioStream" uid="uid://di7ei7o6rvkum" path="res://game/microgames/baseball_kiss/assets/GGJ_WinBaseball.wav" id="12_hw2sk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf7ev"]
 animations = [{
@@ -212,5 +213,9 @@ texture = ExtResource("6_j2h3k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss"]
 position = Vector2(1.44458, -1.86267)
 shape = SubResource("RectangleShape2D_53xmk")
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("12_hw2sk")
 
 [connection signal="area_shape_entered" from="PepeCharacter/HandCollision" to="." method="_on_hand_collision_area_shape_entered"]

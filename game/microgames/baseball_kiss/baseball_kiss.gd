@@ -35,3 +35,5 @@ func _on_hand_collision_area_shape_entered(area_rid, area, area_shape_index, loc
 		$BreCharacter.play("win")
 		kiss.queue_free()
 		finished.emit(true)
+		$Victory.pitch_scale = Engine.time_scale
+		$Victory.play()

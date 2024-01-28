@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxxawcp2cuijl"]
+[gd_scene load_steps=17 format=3 uid="uid://cxxawcp2cuijl"]
 
 [ext_resource type="Texture2D" uid="uid://dbohkvl4ryqbk" path="res://game/microgames/flowers_delivery/assets/girlfriend.png" id="1_isthg"]
 [ext_resource type="Script" path="res://game/microgames/flowers_delivery/flowers_delivery.gd" id="1_jhoh1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dfd2176us2w7g" path="res://game/microgames/flowers_delivery/assets/player2.png" id="3_pyt0j"]
 [ext_resource type="Texture2D" uid="uid://bjs5knhxc6vvi" path="res://game/microgames/flowers_delivery/assets/dodge.png" id="4_snyja"]
 [ext_resource type="Texture2D" uid="uid://dv1e2uv1xcoxs" path="res://game/shared/assets/blank.png" id="6_omk1m"]
+[ext_resource type="AudioStream" uid="uid://el3oki6pjf3j" path="res://game/microgames/flowers_delivery/assets/527291__wolfdoctor__stick-wacking-slowed-down.wav" id="8_df7lp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fhfcp"]
 animations = [{
@@ -107,3 +108,6 @@ mesh = SubResource("BoxMesh_xy5s1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lochx")
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_df7lp")

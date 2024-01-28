@@ -22,6 +22,8 @@ var lives = 4
 
 func _ready() -> void:
 	randomize()
+	_set_speed(1)
+	%AudioMusic.play()
 	
 	MICROGAMES.shuffle()
 	
@@ -44,12 +46,16 @@ func _ready() -> void:
 			
 			await transition.play_result_animation(_won_last_microgame)
 			
-			if not _won_last_microgame:
+			if _won_last_microgame:
+				%AudioCheer.play()
+			else:
+				%AudioCrowdBooMicrogame.play()
 				await get_tree().create_timer(0.5).timeout 
 				transition.lose_life()
 				lives -= 1
 				
 				if lives == 0:
+					%AudioCrowdBooLives.play()
 					await get_tree().create_timer(0.5).timeout 
 					%FadeAnimationPlayer.play_backwards("fade_in")
 					await %FadeAnimationPlayer.animation_finished
@@ -70,13 +76,17 @@ func _ready() -> void:
 			Session.shown_types[_current_microgame.microgame_control] = true
 		
 		var instruction_resource = instruction_popup.get_instruction(_current_microgame.microgame_control)
+		
+		%AudioMusic.playing = false
+		%AudioBeforeMinigame.play()
 		await transition.show_instruction(instruction_resource)
 		
 		%MicrogameInstructionLabel.show_instruction(_current_microgame.instructions)
-		
+
 		await transition.microgame_fade_in()
 		
 		%MicrogameTvTimer.play()
+		%AudioMinigame.play()
 		_current_microgame.process_mode = Node.PROCESS_MODE_INHERIT
 		
 		_won_last_microgame = await _current_microgame.finished
@@ -86,7 +96,19 @@ func _ready() -> void:
 			%MicrogameTvTimer.finish()
 		
 		await get_tree().create_timer(0.5).timeout
-		
+		%AudioMusic.playing = true
 		_starting = false
 		_microgame_count += 1
-		Engine.time_scale = 1 + (_microgame_count * 0.05)
+		_set_speed(1 + (_microgame_count * 0.05))
+		%AudioMinigame.stop()
+		%AudioMinigame.seek(0)
+
+
+func _set_speed(speed):
+	Engine.time_scale = speed
+	%AudioMusic.pitch_scale = speed
+	%AudioCrowdBooMicrogame.pitch_scale = speed
+	%AudioCheer.pitch_scale = speed
+	%AudioCrowdBooLives.pitch_scale = speed
+	%AudioBeforeMinigame.pitch_scale = speed
+	%AudioMinigame.pitch_scale = 0.2 + speed

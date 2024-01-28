@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfitfl87k1wu2"]
+[gd_scene load_steps=8 format=3 uid="uid://cfitfl87k1wu2"]
 
 [ext_resource type="Script" path="res://game/microgames/find_window/find_window.gd" id="1_167ws"]
 [ext_resource type="Texture2D" uid="uid://j0btxfrk2q8k" path="res://game/microgames/find_window/assets/Img_background_windows.png" id="1_w06df"]
 [ext_resource type="Texture2D" uid="uid://7h0hokgsxon4" path="res://game/microgames/find_window/assets/Img_MSN_namoradinha.png" id="3_ekh6x"]
 [ext_resource type="Script" path="res://game/microgames/find_window/msn_girlfriend.gd" id="4_ithnb"]
-[ext_resource type="PackedScene" uid="uid://dxo3khe6emukf" path="res://game/microgames/find_window/msn_regular.tscn" id="4_t7t3v"]
+[ext_resource type="PackedScene" path="res://game/microgames/find_window/msn_regular.tscn" id="4_t7t3v"]
+[ext_resource type="AudioStream" uid="uid://cwb7oyqr6ix7o" path="res://game/microgames/find_window/assets/GGJ_msnvictory.wav" id="6_1udmc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_csx47"]
 font_color = Color(0.443137, 0.443137, 0.443137, 1)
@@ -104,5 +105,9 @@ offset_right = 876.0
 offset_bottom = 620.0
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_1udmc")
 
 [connection signal="button_down" from="AllWindows/ImgMsnNamoradinha/SendButton" to="." method="_on_send_button_button_down"]

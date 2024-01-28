@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvjimat8d7liw"]
+[gd_scene load_steps=6 format=3 uid="uid://bvjimat8d7liw"]
 
 [ext_resource type="Script" path="res://game/menu.gd" id="1_24jgf"]
+[ext_resource type="AudioStream" uid="uid://dgypuqc63dc42" path="res://game/shared/assets/GGJ_mainmenu.ogg" id="2_w8s3m"]
 
 [sub_resource type="Animation" id="Animation_amao6"]
 length = 0.001
@@ -75,3 +76,7 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_n3va2")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_w8s3m")
+autoplay = true
