@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://tbv0acwtfx1t"]
+[gd_scene load_steps=22 format=3 uid="uid://h4y7kn003ao1"]
 
 [ext_resource type="Script" path="res://game/microgames/baseball_kiss/baseball_kiss.gd" id="1_urxm5"]
 [ext_resource type="Texture2D" uid="uid://1mnstkvhabph" path="res://game/microgames/baseball_kiss/assets/Img_background_windows.png" id="2_odjhy"]
@@ -177,7 +177,7 @@ scale = Vector2(0.3, 0.3)
 curve = SubResource("Curve2D_hb7qp")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Paths/ParthLeft"]
-position = Vector2(-1751.22, -68.4033)
+position = Vector2(-1751.22, -68.4037)
 rotation = -0.271729
 progress = 3626.66
 

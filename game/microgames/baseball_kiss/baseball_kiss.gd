@@ -10,7 +10,7 @@ var path = null
 func _microgame_ready():
 	var paths = $Paths.get_children()
 	var choose_path = randi_range(0, paths.size()-1)
-	print(choose_path)
+
 	path = paths[choose_path].get_child(0)
 	path.rotates = false
 	kiss.reparent(path)

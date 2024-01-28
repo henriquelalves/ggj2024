@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deb8hl537upa1"
-path="res://.godot/imported/Img_timer_2.png-56774a967d00c04e5e7920ca89db1260.ctex"
+uid="uid://8abra05bev3b"
+path="res://.godot/imported/exp.png-678be4d75d87644797d4d4328de5d75f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/shared/timer/Img_timer_2.png"
-dest_files=["res://.godot/imported/Img_timer_2.png-56774a967d00c04e5e7920ca89db1260.ctex"]
+source_file="res://game/shared/explosion/exp.png"
+dest_files=["res://.godot/imported/exp.png-678be4d75d87644797d4d4328de5d75f.ctex"]
 
 [params]
 

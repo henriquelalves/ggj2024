@@ -54,16 +54,19 @@ func _ready() -> void:
 	
 		await transition.play_microgame_count(_microgame_count)
 		
-		if not Session.shown_types.has(_current_microgame.microgame_control):
-			await instruction_popup.play_instruction(_current_microgame.microgame_control)
-			Session.shown_types[_current_microgame.microgame_control] = true
+		#if not Session.shown_types.has(_current_microgame.microgame_control):
+			#await instruction_popup.play_instruction(_current_microgame.microgame_control)
+			#Session.shown_types[_current_microgame.microgame_control] = true
 		
 		await transition.microgame_fade_in()
-		
+		%MicrogameTvTimer.play()
 		_current_microgame.process_mode = Node.PROCESS_MODE_INHERIT
 		
 		_won_last_microgame = await _current_microgame.finished
 		_current_microgame.process_mode = Node.PROCESS_MODE_DISABLED
+		
+		if _current_microgame.get_time_left() > 0.001:
+			%MicrogameTvTimer.finish()
 		
 		await get_tree().create_timer(0.5).timeout
 		

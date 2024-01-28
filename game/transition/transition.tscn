@@ -13,6 +13,93 @@ font = ExtResource("2_phg5r")
 font_size = 80
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_gf6gi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Foreground/ViewportContainer:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 220)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Foreground/ViewportContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, 68)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(338, 305)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(163, 386)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(820, 306)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(982, 389)]
+}
+
 [sub_resource type="Animation" id="Animation_67853"]
 resource_name = "microgame_fade_out"
 length = 0.5
@@ -183,93 +270,6 @@ tracks/4/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_gf6gi"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Foreground/ViewportContainer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Foreground/ViewportContainer:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(432, 220)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Foreground/ViewportContainer:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(360, 68)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Foreground/Characters/CharacterAnimation:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(338, 305)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Foreground/Characters/CharacterAnimation2:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(163, 386)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Foreground/Characters/CharacterAnimation3:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(820, 306)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Foreground/Characters/CharacterAnimation4:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(982, 389)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_en0c8"]
 _data = {
 "RESET": SubResource("Animation_gf6gi"),
@@ -342,10 +342,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 5119.0
-offset_top = 2476.0
-offset_right = 5355.0
-offset_bottom = 2586.0
+offset_left = 5695.0
+offset_top = 2800.0
+offset_right = 5931.0
+offset_bottom = 2910.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "blabla"
@@ -365,7 +365,6 @@ mouse_filter = 2
 
 [node name="CharacterAnimation" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
 position = Vector2(338, 305)
-scale = Vector2(2, 2)
 sprite_frames = ExtResource("3_gxf7f")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation"]
@@ -374,11 +373,10 @@ position = Vector2(-14, 12)
 texture = ExtResource("4_wxw0m")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 3
-vframes = 9
+vframes = 5
 
 [node name="CharacterAnimation2" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
 position = Vector2(163, 386)
-scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation2"]
 show_behind_parent = true
@@ -386,11 +384,11 @@ position = Vector2(-18, 5)
 texture = ExtResource("4_wxw0m")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 3
-vframes = 9
+vframes = 5
 
 [node name="CharacterAnimation3" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
 position = Vector2(820, 306)
-scale = Vector2(-2, 2)
+scale = Vector2(-1, 1)
 sprite_frames = ExtResource("5_l50r6")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation3"]
@@ -399,11 +397,11 @@ position = Vector2(5, 18)
 texture = ExtResource("4_wxw0m")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 3
-vframes = 9
+vframes = 5
 
 [node name="CharacterAnimation4" parent="Foreground/Characters" instance=ExtResource("2_2nft6")]
 position = Vector2(982, 389)
-scale = Vector2(-2, 2)
+scale = Vector2(-1, 1)
 sprite_frames = ExtResource("6_eiuh1")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Foreground/Characters/CharacterAnimation4"]
@@ -412,7 +410,7 @@ position = Vector2(0, -1)
 texture = ExtResource("4_wxw0m")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 3
-vframes = 9
+vframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
